@@ -23,19 +23,26 @@ struct KPMEInfo_t
 	struct RaidKP_t
 	{
 		int  LI; // including LD
+		bool Infallible;
+		bool RaidGod;
 
 		int  W1_ValeGuardian;
 		int  W1_Gorseval;
 		int  W1_Sabetha;
 		bool W1_TheEternal;
+		bool W1_GuardianOfTheVale;
 
 		int  W2_Slothasor;
 		int  W2_Matthias;
 		bool W2_SlipperySlubling;
+		bool W2_TheEternal;
+		bool W2_BringerOfSalvation;
 
 		int  W3_Escort;
 		int  W3_KeepConstruct;
 		int  W3_Xera;
+		bool W3_TheEternal;
+		bool W3_CastleCrasher;
 
 		int  W4_Cairn;
 		int  W4_MursaatOverseer;
@@ -44,20 +51,29 @@ struct KPMEInfo_t
 		bool W4_Committed;
 		bool W4_SilentSavior;
 		bool W4_DemonsDemise;
+		bool W4_TheEternal;
+		bool W4_Jailbreaker;
 
 		int  W5_SoullessHorror;
 		int  W5_Dhuum;
 		bool W5_VoiceInTheVoid;
+		bool W5_TheEternal;
+		bool W5_SaviorOfTheUnderworld;
+		bool W5_DhuumsButcher;
 
 		int  W6_ConjuredAmalgamate;
 		int  W6_LargosTwins;
 		int  W6_Qadim;
 		bool W6_ChampionOfZomorros;
+		bool W6_TheEternal;
+		bool W6_MysticAdventurer;
 
 		int  W7_CardinalAdina;
 		int  W7_CardinalSabir;
 		int  W7_QadimThePeerless;
 		bool W7_EverlastingAllyOfAhdashim;
+		bool W7_TheEternal;
+		bool W7_FriendToDjinn;
 
 		int  W8_Greer;
 		int  W8_GreerCM;
@@ -66,6 +82,7 @@ struct KPMEInfo_t
 		int  W8_Ura;
 		int  W8_UraCM;
 		bool W8_TheEternal;
+		bool W8_BreakerOfTitans;
 		bool W8_RaidExpert;
 		bool W8_Godsbane;
 		bool W8_LegendaryConquerorOfUra;
@@ -104,6 +121,10 @@ struct KPMEInfo_t
 		int  EOD_CerusCM;
 		bool EOD_EmbodimentOfSin;
 		bool EOD_LegendaryConquerorOfCerus;
+
+		int  VOE_Kela;
+		int  VOE_KelaCM;
+		bool VOE_CrustaceanCorraler;
 	} Strikes;
 
 	struct FractalKP_t
@@ -163,18 +184,26 @@ inline std::string CheckRequirements(const KPMEInfo_t& aValue, const KPMEInfo_t&
 
 	// Raids
 	checkInt(aValue.Raids.LI, aRequired.Raids.LI, "Legendary Insights");
+	checkBool(aValue.Raids.Infallible, aRequired.Raids.Infallible, "Infallible");
+	checkBool(aValue.Raids.RaidGod, aRequired.Raids.RaidGod, "Raid God");
+
 	checkInt(aValue.Raids.W1_ValeGuardian, aRequired.Raids.W1_ValeGuardian, "Vale Guardian");
 	checkInt(aValue.Raids.W1_Gorseval, aRequired.Raids.W1_Gorseval, "Gorseval");
 	checkInt(aValue.Raids.W1_Sabetha, aRequired.Raids.W1_Sabetha, "Sabetha");
 	checkBool(aValue.Raids.W1_TheEternal, aRequired.Raids.W1_TheEternal, "The Eternal");
+	checkBool(aValue.Raids.W1_GuardianOfTheVale, aRequired.Raids.W1_GuardianOfTheVale, "Guardian of the Vale");
 
 	checkInt(aValue.Raids.W2_Slothasor, aRequired.Raids.W2_Slothasor, "Slothasor");
 	checkInt(aValue.Raids.W2_Matthias, aRequired.Raids.W2_Matthias, "Matthias");
 	checkBool(aValue.Raids.W2_SlipperySlubling, aRequired.Raids.W2_SlipperySlubling, "Slippery Slubling");
+	checkBool(aValue.Raids.W2_TheEternal, aRequired.Raids.W2_TheEternal, "The Eternal");
+	checkBool(aValue.Raids.W2_BringerOfSalvation, aRequired.Raids.W2_BringerOfSalvation, "Bringer of Salvation");
 
 	checkInt(aValue.Raids.W3_Escort, aRequired.Raids.W3_Escort, "Escort clears");
 	checkInt(aValue.Raids.W3_KeepConstruct, aRequired.Raids.W3_KeepConstruct, "Keep Construct");
 	checkInt(aValue.Raids.W3_Xera, aRequired.Raids.W3_Xera, "Xera");
+	checkBool(aValue.Raids.W3_TheEternal, aRequired.Raids.W3_TheEternal, "The Eternal");
+	checkBool(aValue.Raids.W3_CastleCrasher, aRequired.Raids.W3_CastleCrasher, "Castle Crasher");
 
 	checkInt(aValue.Raids.W4_Cairn, aRequired.Raids.W4_Cairn, "Cairn");
 	checkInt(aValue.Raids.W4_MursaatOverseer, aRequired.Raids.W4_MursaatOverseer, "Mursaat Overseer");
@@ -183,20 +212,29 @@ inline std::string CheckRequirements(const KPMEInfo_t& aValue, const KPMEInfo_t&
 	checkBool(aValue.Raids.W4_Committed, aRequired.Raids.W4_Committed, "Committed");
 	checkBool(aValue.Raids.W4_SilentSavior, aRequired.Raids.W4_SilentSavior, "Silent Savior");
 	checkBool(aValue.Raids.W4_DemonsDemise, aRequired.Raids.W4_DemonsDemise, "Demon's Demise");
+	checkBool(aValue.Raids.W4_TheEternal, aRequired.Raids.W4_TheEternal, "The Eternal");
+	checkBool(aValue.Raids.W4_Jailbreaker, aRequired.Raids.W4_Jailbreaker, "Jailbreaker");
 
 	checkInt(aValue.Raids.W5_SoullessHorror, aRequired.Raids.W5_SoullessHorror, "Soulless Horror");
 	checkInt(aValue.Raids.W5_Dhuum, aRequired.Raids.W5_Dhuum, "Dhuum");
 	checkBool(aValue.Raids.W5_VoiceInTheVoid, aRequired.Raids.W5_VoiceInTheVoid, "Voice in the Void");
+	checkBool(aValue.Raids.W5_TheEternal, aRequired.Raids.W5_TheEternal, "The Eternal");
+	checkBool(aValue.Raids.W5_SaviorOfTheUnderworld, aRequired.Raids.W5_SaviorOfTheUnderworld, "Savior of the Underworld");
+	checkBool(aValue.Raids.W5_DhuumsButcher, aRequired.Raids.W5_DhuumsButcher, "Dhuum's Butcher");
 
 	checkInt(aValue.Raids.W6_ConjuredAmalgamate, aRequired.Raids.W6_ConjuredAmalgamate, "Conjured Amalgamate");
 	checkInt(aValue.Raids.W6_LargosTwins, aRequired.Raids.W6_LargosTwins, "Largos Twins");
 	checkInt(aValue.Raids.W6_Qadim, aRequired.Raids.W6_Qadim, "Qadim");
 	checkBool(aValue.Raids.W6_ChampionOfZomorros, aRequired.Raids.W6_ChampionOfZomorros, "Champion of Zomorros");
+	checkBool(aValue.Raids.W6_TheEternal, aRequired.Raids.W6_TheEternal, "The Eternal");
+	checkBool(aValue.Raids.W6_MysticAdventurer, aRequired.Raids.W6_MysticAdventurer, "Mystic Adventurer");
 
 	checkInt(aValue.Raids.W7_CardinalAdina, aRequired.Raids.W7_CardinalAdina, "Cardinal Adina");
 	checkInt(aValue.Raids.W7_CardinalSabir, aRequired.Raids.W7_CardinalSabir, "Cardinal Sabir");
 	checkInt(aValue.Raids.W7_QadimThePeerless, aRequired.Raids.W7_QadimThePeerless, "Qadim the Peerless");
 	checkBool(aValue.Raids.W7_EverlastingAllyOfAhdashim, aRequired.Raids.W7_EverlastingAllyOfAhdashim, "Everlasting Ally of Ahdashim");
+	checkBool(aValue.Raids.W7_TheEternal, aRequired.Raids.W7_TheEternal, "The Eternal");
+	checkBool(aValue.Raids.W7_FriendToDjinn, aRequired.Raids.W7_FriendToDjinn, "Friend to Djinn");
 
 	checkInt(aValue.Raids.W8_Greer, aRequired.Raids.W8_Greer, "Greer");
 	checkInt(aValue.Raids.W8_GreerCM, aRequired.Raids.W8_GreerCM, "Greer CM");
@@ -205,6 +243,7 @@ inline std::string CheckRequirements(const KPMEInfo_t& aValue, const KPMEInfo_t&
 	checkInt(aValue.Raids.W8_Ura, aRequired.Raids.W8_Ura, "Ura");
 	checkInt(aValue.Raids.W8_UraCM, aRequired.Raids.W8_UraCM, "Ura CM");
 	checkBool(aValue.Raids.W8_TheEternal, aRequired.Raids.W8_TheEternal, "The Eternal");
+	checkBool(aValue.Raids.W8_BreakerOfTitans, aRequired.Raids.W8_BreakerOfTitans, "Breaker of Titans");
 	checkBool(aValue.Raids.W8_RaidExpert, aRequired.Raids.W8_RaidExpert, "Raid Expert");
 	checkBool(aValue.Raids.W8_Godsbane, aRequired.Raids.W8_Godsbane, "Godsbane");
 	checkBool(aValue.Raids.W8_LegendaryConquerorOfUra, aRequired.Raids.W8_LegendaryConquerorOfUra, "Legendary Conqueror of Ura");
@@ -240,6 +279,10 @@ inline std::string CheckRequirements(const KPMEInfo_t& aValue, const KPMEInfo_t&
 	checkInt(aValue.Strikes.EOD_CerusCM, aRequired.Strikes.EOD_CerusCM, "Cerus CM clears");
 	checkBool(aValue.Strikes.EOD_EmbodimentOfSin, aRequired.Strikes.EOD_EmbodimentOfSin, "Embodiment of Sin");
 	checkBool(aValue.Strikes.EOD_LegendaryConquerorOfCerus, aRequired.Strikes.EOD_LegendaryConquerorOfCerus, "Legendary Conqueror of Cerus");
+
+	checkInt(aValue.Strikes.VOE_Kela, aRequired.Strikes.VOE_Kela, "Kela clears");
+	checkInt(aValue.Strikes.VOE_KelaCM, aRequired.Strikes.VOE_KelaCM, "Kela CM clears");
+	checkBool(aValue.Strikes.VOE_CrustaceanCorraler, aRequired.Strikes.VOE_CrustaceanCorraler, "Crustacean Corraler");
 
 	// Fractals
 	checkInt(aValue.Fractals.UFE, aRequired.Fractals.UFE, "UFE");

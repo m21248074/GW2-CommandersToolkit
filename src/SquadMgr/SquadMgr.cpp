@@ -46,6 +46,8 @@ void KPRequirementEditor(KPMEInfo_t& aKP)
 		{
 			ImGui::SetNextItemWidth(sz * 10);
 			ImGui::InputInt("Legendary Insights", &aKP.Raids.LI, 1, 50);
+			ImGui::Checkbox("Infallible", &aKP.Raids.Infallible);
+			ImGui::Checkbox("Raid God", &aKP.Raids.RaidGod);
 
 			if (ImGui::TreeNode("Wing 1 - Spirit Vale"))
 			{
@@ -59,6 +61,7 @@ void KPRequirementEditor(KPMEInfo_t& aKP)
 				ImGui::InputInt("Sabetha", &aKP.Raids.W1_Sabetha, 1, 50);
 
 				ImGui::Checkbox("The Eternal", &aKP.Raids.W1_TheEternal);
+				ImGui::Checkbox("Guardian of the Vale", &aKP.Raids.W1_GuardianOfTheVale);
 
 				ImGui::TreePop();
 			}
@@ -72,6 +75,8 @@ void KPRequirementEditor(KPMEInfo_t& aKP)
 				ImGui::InputInt("Matthias", &aKP.Raids.W2_Matthias, 1, 50);
 
 				ImGui::Checkbox("Slippery Slubling", &aKP.Raids.W2_SlipperySlubling);
+				ImGui::Checkbox("The Eternal", &aKP.Raids.W2_TheEternal);
+				ImGui::Checkbox("Bringer of Salvation", &aKP.Raids.W2_BringerOfSalvation);
 
 				ImGui::TreePop();
 			}
@@ -86,6 +91,9 @@ void KPRequirementEditor(KPMEInfo_t& aKP)
 
 				ImGui::SetNextItemWidth(sz * 10);
 				ImGui::InputInt("Xera", &aKP.Raids.W3_Xera, 1, 50);
+
+				ImGui::Checkbox("The Eternal", &aKP.Raids.W3_TheEternal);
+				ImGui::Checkbox("Castle Crasher", &aKP.Raids.W3_CastleCrasher);
 
 				ImGui::TreePop();
 			}
@@ -107,6 +115,8 @@ void KPRequirementEditor(KPMEInfo_t& aKP)
 				ImGui::Checkbox("Comitted", &aKP.Raids.W4_Committed);
 				ImGui::Checkbox("Silent Savior", &aKP.Raids.W4_SilentSavior);
 				ImGui::Checkbox("Demons Demise", &aKP.Raids.W4_DemonsDemise);
+				ImGui::Checkbox("The Eternal", &aKP.Raids.W4_TheEternal);
+				ImGui::Checkbox("Jailbreaker", &aKP.Raids.W4_Jailbreaker);
 
 				ImGui::TreePop();
 			}
@@ -120,6 +130,9 @@ void KPRequirementEditor(KPMEInfo_t& aKP)
 				ImGui::InputInt("Dhuum", &aKP.Raids.W5_Dhuum, 1, 50);
 
 				ImGui::Checkbox("Voice in the Void", &aKP.Raids.W5_VoiceInTheVoid);
+				ImGui::Checkbox("The Eternal", &aKP.Raids.W5_TheEternal);
+				ImGui::Checkbox("Savior of the Underworld", &aKP.Raids.W5_SaviorOfTheUnderworld);
+				ImGui::Checkbox("Dhuum's Butcher", &aKP.Raids.W5_DhuumsButcher);
 
 				ImGui::TreePop();
 			}
@@ -136,6 +149,8 @@ void KPRequirementEditor(KPMEInfo_t& aKP)
 				ImGui::InputInt("Qadim", &aKP.Raids.W6_Qadim, 1, 50);
 
 				ImGui::Checkbox("Champion of Zomorros", &aKP.Raids.W6_ChampionOfZomorros);
+				ImGui::Checkbox("The Eternal", &aKP.Raids.W6_TheEternal);
+				ImGui::Checkbox("Mystic Adventurer", &aKP.Raids.W6_MysticAdventurer);
 
 				ImGui::TreePop();
 			}
@@ -152,6 +167,8 @@ void KPRequirementEditor(KPMEInfo_t& aKP)
 				ImGui::InputInt("Qadim the Peerless", &aKP.Raids.W7_QadimThePeerless, 1, 50);
 
 				ImGui::Checkbox("Everlasting Ally of Ahdashim", &aKP.Raids.W7_EverlastingAllyOfAhdashim);
+				ImGui::Checkbox("The Eternal", &aKP.Raids.W7_TheEternal);
+				ImGui::Checkbox("Friend to Djinn", &aKP.Raids.W7_FriendToDjinn);
 
 				ImGui::TreePop();
 			}
@@ -174,6 +191,7 @@ void KPRequirementEditor(KPMEInfo_t& aKP)
 				ImGui::InputInt("Ura CM", &aKP.Raids.W8_UraCM, 1, 50);
 
 				ImGui::Checkbox("The Eternal", &aKP.Raids.W8_TheEternal);
+				ImGui::Checkbox("Breaker of Titans", &aKP.Raids.W8_BreakerOfTitans);
 				ImGui::Checkbox("Raid Expert", &aKP.Raids.W8_RaidExpert);
 				ImGui::Checkbox("Godsbane", &aKP.Raids.W8_Godsbane);
 				ImGui::Checkbox("Legendary Conqueror of Ura", &aKP.Raids.W8_LegendaryConquerorOfUra);
@@ -184,7 +202,7 @@ void KPRequirementEditor(KPMEInfo_t& aKP)
 			ImGui::TreePop();
 		}
 
-		if (ImGui::TreeNode("Strikes"))
+		if (ImGui::TreeNode("Encounters"))
 		{
 			if (ImGui::TreeNode("Icebrood Saga"))
 			{
@@ -266,6 +284,19 @@ void KPRequirementEditor(KPMEInfo_t& aKP)
 				ImGui::TreePop();
 			}
 			
+			if (ImGui::TreeNode("Visions of Eternity"))
+			{
+				ImGui::SetNextItemWidth(sz * 10);
+				ImGui::InputInt("Kela", &aKP.Strikes.VOE_Kela, 1, 50);
+
+				ImGui::SetNextItemWidth(sz * 10);
+				ImGui::InputInt("Kela (CM)", &aKP.Strikes.VOE_KelaCM, 1, 50);
+
+				ImGui::Checkbox("Crustacean Corraller", &aKP.Strikes.VOE_CrustaceanCorraler);
+
+				ImGui::TreePop();
+			}
+
 			ImGui::TreePop();
 		}
 
@@ -811,15 +842,33 @@ void CSquadMgr::GetKPData(PlayerInfo_t& aPlayer)
 					{
 						switch (title["id"].get<int>())
 						{
+							case 622: kpmeInfo->Raids.Infallible = true; break;
+							case 623: kpmeInfo->Raids.RaidGod = true; break;
+
 							case 230: kpmeInfo->Raids.W1_TheEternal = true; break;
+							case 617: kpmeInfo->Raids.W1_GuardianOfTheVale = true; break;
 							case 238: kpmeInfo->Raids.W2_SlipperySlubling = true; break;
+							case 616: kpmeInfo->Raids.W2_TheEternal = true; break;
+							case 621: kpmeInfo->Raids.W2_BringerOfSalvation = true; break;
+							case 606: kpmeInfo->Raids.W3_TheEternal = true; break;
+							case 614: kpmeInfo->Raids.W3_CastleCrasher = true; break;
 							case 264: kpmeInfo->Raids.W4_Committed = true; break;
 							case 262: kpmeInfo->Raids.W4_SilentSavior = true; break;
 							case 269: kpmeInfo->Raids.W4_DemonsDemise = true; break;
+							case 615: kpmeInfo->Raids.W4_TheEternal = true; break;
+							case 609: kpmeInfo->Raids.W4_Jailbreaker = true; break;
 							case 300: kpmeInfo->Raids.W5_VoiceInTheVoid = true; break;
+							case 613: kpmeInfo->Raids.W5_TheEternal = true; break;
+							case 610: kpmeInfo->Raids.W5_SaviorOfTheUnderworld = true; break;
+							case 612: kpmeInfo->Raids.W5_DhuumsButcher = true; break;
 							case 318: kpmeInfo->Raids.W6_ChampionOfZomorros = true; break;
+							case 611: kpmeInfo->Raids.W6_TheEternal = true; break;
+							case 619: kpmeInfo->Raids.W6_MysticAdventurer = true; break;
 							case 328: kpmeInfo->Raids.W7_EverlastingAllyOfAhdashim = true; break;
+							case 607: kpmeInfo->Raids.W7_TheEternal = true; break;
+							case 608: kpmeInfo->Raids.W7_FriendToDjinn = true; break;
 							case 549: kpmeInfo->Raids.W8_TheEternal = true; break;
+							case 620: kpmeInfo->Raids.W8_BreakerOfTitans = true; break;
 							case 550: kpmeInfo->Raids.W8_RaidExpert = true; break;
 							case 570: kpmeInfo->Raids.W8_Godsbane = true; break;
 							case 574: kpmeInfo->Raids.W8_LegendaryConquerorOfUra = true; break;
@@ -832,6 +881,7 @@ void CSquadMgr::GetKPData(PlayerInfo_t& aPlayer)
 							case 419: kpmeInfo->Strikes.EOD_MindFlayer = true; break;
 							case 418: kpmeInfo->Strikes.EOD_EmbodimentOfSin = true; break;
 							case 456: kpmeInfo->Strikes.EOD_LegendaryConquerorOfCerus = true; break;
+							case 624: kpmeInfo->Strikes.VOE_CrustaceanCorraler = true; break;
 
 							case 250: kpmeInfo->Fractals.TheUnclean = true; break;
 							case 277: kpmeInfo->Fractals.LNHB = true; break;
@@ -908,32 +958,36 @@ void CSquadMgr::GetKPData(PlayerInfo_t& aPlayer)
 							case 103996: kpmeInfo->Raids.W8_Ura += token["amount"].get<int>(); break;
 						
 							// AH
-							case 95638: kpmeInfo->Strikes.EOD_AH += token["amount"].get<int>(); break;
-							case 97269: kpmeInfo->Strikes.EOD_AHCM += token["amount"].get<int>(); break;
+							case 95638: case 107067: kpmeInfo->Strikes.EOD_AH += token["amount"].get<int>(); break;
+							case 97269: case 106935: kpmeInfo->Strikes.EOD_AHCM += token["amount"].get<int>(); break;
 
 							// Ankka
-							case 95982: kpmeInfo->Strikes.EOD_Ankka += token["amount"].get<int>(); break;
-							case 96638: kpmeInfo->Strikes.EOD_AnkkaCM += token["amount"].get<int>(); break;
+							case 95982: case 106954: kpmeInfo->Strikes.EOD_Ankka += token["amount"].get<int>(); break;
+							case 96638: case 106999: kpmeInfo->Strikes.EOD_AnkkaCM += token["amount"].get<int>(); break;
 
 							// KO
-							case 97451: kpmeInfo->Strikes.EOD_KO += token["amount"].get<int>(); break;
-							case 96419: kpmeInfo->Strikes.EOD_KOCM += token["amount"].get<int>(); break;
+							case 97451: case 107026: kpmeInfo->Strikes.EOD_KO += token["amount"].get<int>(); break;
+							case 96419: case 107028: kpmeInfo->Strikes.EOD_KOCM += token["amount"].get<int>(); break;
 
 							// HT
-							case 97132: kpmeInfo->Strikes.EOD_HT += token["amount"].get<int>(); break;
-							case 95986: kpmeInfo->Strikes.EOD_HTCM += token["amount"].get<int>(); break;
+							case 97132: case 106956: kpmeInfo->Strikes.EOD_HT += token["amount"].get<int>(); break;
+							case 95986: case 106910: kpmeInfo->Strikes.EOD_HTCM += token["amount"].get<int>(); break;
 
 							// OLC
-							case 99165: kpmeInfo->Strikes.EOD_OLC += token["amount"].get<int>(); break;
-							case 99204: kpmeInfo->Strikes.EOD_OLCCM += token["amount"].get<int>(); break;
+							case 99165: case 106951: kpmeInfo->Strikes.EOD_OLC += token["amount"].get<int>(); break;
+							case 99204: case 107132: kpmeInfo->Strikes.EOD_OLCCM += token["amount"].get<int>(); break;
 							
 							// Dagda
-							case 100068: kpmeInfo->Strikes.EOD_Dagda += token["amount"].get<int>(); break;
-							case 101172: kpmeInfo->Strikes.EOD_DagdaCM += token["amount"].get<int>(); break;
+							case 100068: case 107087: kpmeInfo->Strikes.EOD_Dagda += token["amount"].get<int>(); break;
+							case 101172: case 106940: kpmeInfo->Strikes.EOD_DagdaCM += token["amount"].get<int>(); break;
 
 							// Cerus
-							case 100858: kpmeInfo->Strikes.EOD_Cerus += token["amount"].get<int>(); break;
-							case 101542: kpmeInfo->Strikes.EOD_CerusCM += token["amount"].get<int>(); break;
+							case 100858: case 107114: kpmeInfo->Strikes.EOD_Cerus += token["amount"].get<int>(); break;
+							case 101542: case 107065: kpmeInfo->Strikes.EOD_CerusCM += token["amount"].get<int>(); break;
+
+							// Kela
+							case 106994: kpmeInfo->Strikes.VOE_Kela += token["amount"].get<int>(); break;
+							case 107608: kpmeInfo->Strikes.VOE_KelaCM += token["amount"].get<int>(); break;
 						}
 					}
 				}
@@ -979,15 +1033,12 @@ void CSquadMgr::GetKPData(PlayerInfo_t& aPlayer)
 							case 91260: kpmeInfo->Raids.W7_QadimThePeerless += coffer["amount"].get<int>() * 3; break;
 
 							// Wing 8
-							case 103783: kpmeInfo->Raids.W8_Greer += coffer["amount"].get<int>(); break;
-							case 104306: kpmeInfo->Raids.W8_Greer += coffer["amount"].get<int>(); break;
-							case 104399: kpmeInfo->Raids.W8_GreerCM += coffer["amount"].get<int>(); break;
-							case 103926: kpmeInfo->Raids.W8_Decima += coffer["amount"].get<int>(); break;
-							case 104410: kpmeInfo->Raids.W8_Decima += coffer["amount"].get<int>(); break;
-							case 104246: kpmeInfo->Raids.W8_DecimaCM += coffer["amount"].get<int>(); break;
-							case 103946: kpmeInfo->Raids.W8_Ura += coffer["amount"].get<int>(); break;
-							case 104439: kpmeInfo->Raids.W8_Ura += coffer["amount"].get<int>(); break;
-							case 104355: kpmeInfo->Raids.W8_UraCM += coffer["amount"].get<int>(); break;
+							case 103783: case 104306: kpmeInfo->Raids.W8_Greer += coffer["amount"].get<int>(); break;
+							case 104399: case 107171: kpmeInfo->Raids.W8_GreerCM += coffer["amount"].get<int>(); break;
+							case 103926: case 104410: kpmeInfo->Raids.W8_Decima += coffer["amount"].get<int>(); break;
+							case 104246: case 106934: kpmeInfo->Raids.W8_DecimaCM += coffer["amount"].get<int>(); break;
+							case 103946: case 104439: kpmeInfo->Raids.W8_Ura += coffer["amount"].get<int>(); break;
+							case 104355: case 106938: kpmeInfo->Raids.W8_UraCM += coffer["amount"].get<int>(); break;
 						}
 					}
 				}
