@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="EXTERNAL">
+      <UniqueIdentifier>{0560d06e-1341-4e11-a94c-c427029f7e46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EXTERNAL\imgui">
+      <UniqueIdentifier>{9182ae6d-d1c6-4c6d-837f-8eb7e4f56407}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{23cdb4d1-a77d-4f9e-b891-f2dd3bc0e130}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SquadMgr">
+      <UniqueIdentifier>{21dcb96f-f767-460c-a480-0bbb9cbfe433}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util">
+      <UniqueIdentifier>{caa44a8b-bba3-44c7-b0d5-0048235a3389}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PullTimer">
+      <UniqueIdentifier>{8c0a8e17-6595-4853-a8cd-f5657bddc9b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EXTERNAL\arcdps_ue">
+      <UniqueIdentifier>{97976ba8-ff2a-46df-9735-e7792a4efe8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\professions">
+      <UniqueIdentifier>{114713f4-0636-4c57-b07f-269d9212bce6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\imgui\imgui.cpp">
+      <Filter>EXTERNAL\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\imgui\imgui_demo.cpp">
+      <Filter>EXTERNAL\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\imgui\imgui_draw.cpp">
+      <Filter>EXTERNAL\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\imgui\imgui_tables.cpp">
+      <Filter>EXTERNAL\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\imgui\imgui_widgets.cpp">
+      <Filter>EXTERNAL\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Addon.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UI.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SquadMgr\SquadMgr.cpp">
+      <Filter>SquadMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Util\src\Memory.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Util\src\Paths.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Util\src\Resources.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Util\src\Strings.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Util\src\Time.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Util\src\Url.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Util\src\Base64.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Util\src\CmdLine.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Util\src\DLL.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Util\src\Inputs.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PullTimer\PullTimer.cpp">
+      <Filter>PullTimer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\arcdps_ue\KeyBindsTranslation.cpp">
+      <Filter>EXTERNAL\arcdps_ue</Filter>
+    </ClCompile>
+    <ClCompile Include="src\arcdps_ue\KeyBindHelper.cpp">
+      <Filter>EXTERNAL\arcdps_ue</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src/resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\imgui\imconfig.h">
+      <Filter>EXTERNAL\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\imgui\imgui.h">
+      <Filter>EXTERNAL\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\imgui\imgui_internal.h">
+      <Filter>EXTERNAL\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\imgui\imstb_rectpack.h">
+      <Filter>EXTERNAL\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\imgui\imstb_textedit.h">
+      <Filter>EXTERNAL\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\imgui\imstb_truetype.h">
+      <Filter>EXTERNAL\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src/mumble\Mumble.h">
+      <Filter>EXTERNAL</Filter>
+    </ClInclude>
+    <ClInclude Include="src/nexus\Nexus.h">
+      <Filter>EXTERNAL</Filter>
+    </ClInclude>
+    <ClInclude Include="src/nlohmann\json.hpp">
+      <Filter>EXTERNAL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\arcdps\ArcDPS.h">
+      <Filter>EXTERNAL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Remote.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Addon.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Globals.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\UI.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SquadMgr\SquadMgr.h">
+      <Filter>SquadMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SquadMgr\PlayerInfo.h">
+      <Filter>SquadMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SquadMgr\UtilityInfo.h">
+      <Filter>SquadMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Util\src\Memory.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Util\src\Paths.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Util\src\Resources.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Util\src\Strings.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Util\src\Time.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Util\src\Url.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Util\src\Base64.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Util\src\CmdLine.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Util\src\DLL.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Util\src\Enums.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Util\src\Inputs.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PullTimer\PullTimer.h">
+      <Filter>PullTimer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\arcdps_ue\Definitions.h">
+      <Filter>EXTERNAL\arcdps_ue</Filter>
+    </ClInclude>
+    <ClInclude Include="src\arcdps_ue\KeyBindsTranslation.h">
+      <Filter>EXTERNAL\arcdps_ue</Filter>
+    </ClInclude>
+    <ClInclude Include="src\arcdps_ue\KeyBindStructs.h">
+      <Filter>EXTERNAL\arcdps_ue</Filter>
+    </ClInclude>
+    <ClInclude Include="src\arcdps_ue\KeyBindHelper.h">
+      <Filter>EXTERNAL\arcdps_ue</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RTAPI\RTAPI.hpp">
+      <Filter>EXTERNAL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SquadMgr\KillproofInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src/GW2-CommandersToolkit.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="src/Resources\Alacrity.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="src/Resources\commander_toolkit.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="src/Resources\commander_toolkit_hover.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="src/Resources\Quickness.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="src\Resources\Tag_Commander.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="src\Resources\Tag_Lieutenant.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="src\Resources\close.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\nec_scg.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\rev.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\rev_her.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\rev_ren.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\rev_vin.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\rgr.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\rgr_drd.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\rgr_slb.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\rgr_utd.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\thf.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\thf_dde.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\thf_ddl.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\thf_spc.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\war.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\war_brs.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\war_bsw.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\war_spb.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\ele.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\ele_cat.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\ele_tmp.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\ele_wvr.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\eng.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\eng_hls.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\eng_mch.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\eng_scr.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\grd.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\grd_dgh.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\grd_fbd.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\grd_wbd.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\mes.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\mes_chr.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\mes_mir.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\mes_vrt.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\nec.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\nec_hrb.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\nec_rpr.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\unknown.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\profile.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\nec_rit.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\rgr_gal.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\thf_atq.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\war_par.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\ele_evk.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\eng_ama.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\grd_lum.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\mes_tbd.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+    <Image Include="src\Resources\professions\rev_cnd.png">
+      <Filter>Resource Files\professions</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
