@@ -177,7 +177,7 @@ inline std::string CheckRequirements(const KPMEInfo_t& aValue, const KPMEInfo_t&
 			}
 			else if (!aValue)
 			{
-				missing += "Missing " + aName + "\n";
+				missing += "缺少 " + aName + "\n";
 			}
 		}
 	};

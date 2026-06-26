@@ -31,7 +31,7 @@ void KPRequirementEditor(KPMEInfo_t& aKP)
 {
 	std::string popupName = "KPRequirementEditor";
 
-	if (ImGui::SmallButton("KP Requirement"))
+	if (ImGui::SmallButton("KP 要求"))
 	{
 		ImGui::OpenPopup(popupName.c_str());
 	}
@@ -40,161 +40,161 @@ void KPRequirementEditor(KPMEInfo_t& aKP)
 
 	if (ImGui::BeginPopupContextItem(popupName.c_str()))
 	{
-		ImGui::Text("Set the KP Requirements to check against within the group.");
-		ImGui::Text("Raid coffers are normalized to 3 tokens.");
-		if (ImGui::TreeNode("Raids"))
+		ImGui::Text("設定用於檢查團隊成員的擊殺證明(KP)要求。");
+		ImGui::Text("Raid 寶箱將統一折算為 3 個代幣。");
+		if (ImGui::TreeNode("大型地下城(Raid)"))
 		{
 			ImGui::SetNextItemWidth(sz * 10);
-			ImGui::InputInt("Legendary Insights", &aKP.Raids.LI, 1, 50);
-			ImGui::Checkbox("Infallible", &aKP.Raids.Infallible);
-			ImGui::Checkbox("Raid God", &aKP.Raids.RaidGod);
+			ImGui::InputInt("傳奇見解(LI)", &aKP.Raids.LI, 1, 50);
+			ImGui::Checkbox("萬無一失(Infallible)", &aKP.Raids.Infallible);
+			ImGui::Checkbox("大型地下城神明(Raid God)", &aKP.Raids.RaidGod);
 
-			if (ImGui::TreeNode("Wing 1 - Spirit Vale"))
+			if (ImGui::TreeNode("W1 - 靈魂山谷(Spirit Vale)"))
 			{
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Vale Guardian", &aKP.Raids.W1_ValeGuardian, 1, 50);
+				ImGui::InputInt("山谷守護者(Vale Guardian)", &aKP.Raids.W1_ValeGuardian, 1, 50);
 
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Gorseval", &aKP.Raids.W1_Gorseval, 1, 50);
+				ImGui::InputInt("戈瑟瓦爾(Gorseval)", &aKP.Raids.W1_Gorseval, 1, 50);
 
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Sabetha", &aKP.Raids.W1_Sabetha, 1, 50);
+				ImGui::InputInt("薩蓓莎(Sabetha)", &aKP.Raids.W1_Sabetha, 1, 50);
 
-				ImGui::Checkbox("The Eternal", &aKP.Raids.W1_TheEternal);
-				ImGui::Checkbox("Guardian of the Vale", &aKP.Raids.W1_GuardianOfTheVale);
+				ImGui::Checkbox("永恆化身(The Eternal)", &aKP.Raids.W1_TheEternal);
+				ImGui::Checkbox("山谷守護者(Guardian of the Vale)", &aKP.Raids.W1_GuardianOfTheVale);
 
 				ImGui::TreePop();
 			}
 
-			if (ImGui::TreeNode("Wing 2 - Salvation Pass"))
+			if (ImGui::TreeNode("W2 - 救贖小道(Salvation Pass)"))
 			{
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Slothasor", &aKP.Raids.W2_Slothasor, 1, 50);
+				ImGui::InputInt("斯洛薩索(Slothasor)", &aKP.Raids.W2_Slothasor, 1, 50);
 
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Matthias", &aKP.Raids.W2_Matthias, 1, 50);
+				ImGui::InputInt("馬蒂亞斯(Matthias)", &aKP.Raids.W2_Matthias, 1, 50);
 
-				ImGui::Checkbox("Slippery Slubling", &aKP.Raids.W2_SlipperySlubling);
-				ImGui::Checkbox("The Eternal", &aKP.Raids.W2_TheEternal);
-				ImGui::Checkbox("Bringer of Salvation", &aKP.Raids.W2_BringerOfSalvation);
+				ImGui::Checkbox("黏滑毛蟲(Slippery Slubling)", &aKP.Raids.W2_SlipperySlubling);
+				ImGui::Checkbox("永恆救贖小道(The Eternal)", &aKP.Raids.W2_TheEternal);
+				ImGui::Checkbox("救贖使者(Bringer of Salvation)", &aKP.Raids.W2_BringerOfSalvation);
 
 				ImGui::TreePop();
 			}
 
-			if (ImGui::TreeNode("Wing 3 - Stronghold of the Faithful"))
+			if (ImGui::TreeNode("W3 - 信仰要塞(Stronghold of the Faithful)"))
 			{
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Escort", &aKP.Raids.W3_Escort, 1, 50);
+				ImGui::InputInt("要塞圍攻(Escort)", &aKP.Raids.W3_Escort, 1, 50);
 
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Keep Construct", &aKP.Raids.W3_KeepConstruct, 1, 50);
+				ImGui::InputInt("要塞構造體(Keep Construct)", &aKP.Raids.W3_KeepConstruct, 1, 50);
 
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Xera", &aKP.Raids.W3_Xera, 1, 50);
+				ImGui::InputInt("琦拉(Xera)", &aKP.Raids.W3_Xera, 1, 50);
 
-				ImGui::Checkbox("The Eternal", &aKP.Raids.W3_TheEternal);
-				ImGui::Checkbox("Castle Crasher", &aKP.Raids.W3_CastleCrasher);
+				ImGui::Checkbox("永恆信仰要塞(The Eternal)", &aKP.Raids.W3_TheEternal);
+				ImGui::Checkbox("城堡突破者(Castle Crasher)", &aKP.Raids.W3_CastleCrasher);
 
 				ImGui::TreePop();
 			}
 
-			if (ImGui::TreeNode("Wing 4 - Bastion of the Penitent"))
+			if (ImGui::TreeNode("W4 - 懺悔者堡壘(Bastion of the Penitent)"))
 			{
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Cairn", &aKP.Raids.W4_Cairn, 1, 50);
+				ImGui::InputInt("凱玲(Cairn)", &aKP.Raids.W4_Cairn, 1, 50);
 
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Mursaat Overseer", &aKP.Raids.W4_MursaatOverseer, 1, 50);
+				ImGui::InputInt("末世魔監工(Mursaat Overseer)", &aKP.Raids.W4_MursaatOverseer, 1, 50);
 
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Samarog", &aKP.Raids.W4_Samarog, 1, 50);
+				ImGui::InputInt("薩瑪洛格(Samarog)", &aKP.Raids.W4_Samarog, 1, 50);
 
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Deimos", &aKP.Raids.W4_Deimos, 1, 50);
+				ImGui::InputInt("戴莫斯(Deimos)", &aKP.Raids.W4_Deimos, 1, 50);
 
-				ImGui::Checkbox("Comitted", &aKP.Raids.W4_Committed);
-				ImGui::Checkbox("Silent Savior", &aKP.Raids.W4_SilentSavior);
-				ImGui::Checkbox("Demons Demise", &aKP.Raids.W4_DemonsDemise);
-				ImGui::Checkbox("The Eternal", &aKP.Raids.W4_TheEternal);
-				ImGui::Checkbox("Jailbreaker", &aKP.Raids.W4_Jailbreaker);
+				ImGui::Checkbox("堅毅不屈的玩家(Committed)", &aKP.Raids.W4_Committed);
+				ImGui::Checkbox("沉默救星(Silent Savior)", &aKP.Raids.W4_SilentSavior);
+				ImGui::Checkbox("惡魔之死(Demon's Demise)", &aKP.Raids.W4_DemonsDemise);
+				ImGui::Checkbox("永恆懺悔者堡壘(The Eternal)", &aKP.Raids.W4_TheEternal);
+				ImGui::Checkbox("越獄者(Jailbreaker)", &aKP.Raids.W4_Jailbreaker);
 
 				ImGui::TreePop();
 			}
 
-			if (ImGui::TreeNode("Wing 5 - Hall of Chains"))
+			if (ImGui::TreeNode("W5 - 鎖鏈殿堂(Hall of Chains)"))
 			{
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Soulless Horror", &aKP.Raids.W5_SoullessHorror, 1, 50);
+				ImGui::InputInt("無魂懼魔(Soulless Horror)", &aKP.Raids.W5_SoullessHorror, 1, 50);
 
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Dhuum", &aKP.Raids.W5_Dhuum, 1, 50);
+				ImGui::InputInt("德姆(Dhuum)", &aKP.Raids.W5_Dhuum, 1, 50);
 
-				ImGui::Checkbox("Voice in the Void", &aKP.Raids.W5_VoiceInTheVoid);
-				ImGui::Checkbox("The Eternal", &aKP.Raids.W5_TheEternal);
-				ImGui::Checkbox("Savior of the Underworld", &aKP.Raids.W5_SaviorOfTheUnderworld);
-				ImGui::Checkbox("Dhuum's Butcher", &aKP.Raids.W5_DhuumsButcher);
+				ImGui::Checkbox("虛空之聲(Voice in the Void)", &aKP.Raids.W5_VoiceInTheVoid);
+				ImGui::Checkbox("永恆鎖鏈殿堂(The Eternal)", &aKP.Raids.W5_TheEternal);
+				ImGui::Checkbox("地下世界救星(Savior of the Underworld)", &aKP.Raids.W5_SaviorOfTheUnderworld);
+				ImGui::Checkbox("德姆殺手(Dhuum's Butcher)", &aKP.Raids.W5_DhuumsButcher);
 
 				ImGui::TreePop();
 			}
 
-			if (ImGui::TreeNode("Wing 6 - Mythwright Gambit"))
+			if (ImGui::TreeNode("W6 - 祕法對決(Mythwright Gambit)"))
 			{
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Conjured Amalgamate", &aKP.Raids.W6_ConjuredAmalgamate, 1, 50);
+				ImGui::InputInt("咒術融合體(Conjured Amalgamate)", &aKP.Raids.W6_ConjuredAmalgamate, 1, 50);
 
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Largos Twins", &aKP.Raids.W6_LargosTwins, 1, 50);
+				ImGui::InputInt("孿生蝶翼人(Largos Twins)", &aKP.Raids.W6_LargosTwins, 1, 50);
 
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Qadim", &aKP.Raids.W6_Qadim, 1, 50);
+				ImGui::InputInt("卡迪姆(Qadim)", &aKP.Raids.W6_Qadim, 1, 50);
 
-				ImGui::Checkbox("Champion of Zomorros", &aKP.Raids.W6_ChampionOfZomorros);
-				ImGui::Checkbox("The Eternal", &aKP.Raids.W6_TheEternal);
-				ImGui::Checkbox("Mystic Adventurer", &aKP.Raids.W6_MysticAdventurer);
+				ImGui::Checkbox("蟲師保鑣(Champion of Zomorros)", &aKP.Raids.W6_ChampionOfZomorros);
+				ImGui::Checkbox("永恆祕法對決(The Eternal)", &aKP.Raids.W6_TheEternal);
+				ImGui::Checkbox("神秘冒險者(Mystic Adventurer)", &aKP.Raids.W6_MysticAdventurer);
 
 				ImGui::TreePop();
 			}
 
-			if (ImGui::TreeNode("Wing 7 - The Key of Ahdashim"))
+			if (ImGui::TreeNode("W7 - 阿達西姆之鑰(The Key of Ahdashim)"))
 			{
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Cardinal Adina", &aKP.Raids.W7_CardinalAdina, 1, 50);
+				ImGui::InputInt("基石守護者艾迪娜(Cardinal Adina)", &aKP.Raids.W7_CardinalAdina, 1, 50);
 
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Cardinal Sabir", &aKP.Raids.W7_CardinalSabir, 1, 50);
+				ImGui::InputInt("基石守護者薩比爾(Cardinal Sabir)", &aKP.Raids.W7_CardinalSabir, 1, 50);
 
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Qadim the Peerless", &aKP.Raids.W7_QadimThePeerless, 1, 50);
+				ImGui::InputInt("無可匹敵的卡迪姆(Qadim the Peerless)", &aKP.Raids.W7_QadimThePeerless, 1, 50);
 
-				ImGui::Checkbox("Everlasting Ally of Ahdashim", &aKP.Raids.W7_EverlastingAllyOfAhdashim);
-				ImGui::Checkbox("The Eternal", &aKP.Raids.W7_TheEternal);
-				ImGui::Checkbox("Friend to Djinn", &aKP.Raids.W7_FriendToDjinn);
+				ImGui::Checkbox("阿達西姆的永恆盟友(Everlasting Ally of Ahdashim)", &aKP.Raids.W7_EverlastingAllyOfAhdashim);
+				ImGui::Checkbox("永恆阿達西姆之鑰(The Eternal)", &aKP.Raids.W7_TheEternal);
+				ImGui::Checkbox("巨靈之友(Friend to Djinn)", &aKP.Raids.W7_FriendToDjinn);
 
 				ImGui::TreePop();
 			}
 
-			if (ImGui::TreeNode("Wing 8 - Mount Balrior"))
+			if (ImGui::TreeNode("W8 - 巴里爾山(Mount Balrior)"))
 			{
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Greer", &aKP.Raids.W8_Greer, 1, 50);
+				ImGui::InputInt("格里爾(Greer)", &aKP.Raids.W8_Greer, 1, 50);
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Greer CM", &aKP.Raids.W8_GreerCM, 1, 50);
+				ImGui::InputInt("格里爾 挑戰模式(Greer CM)", &aKP.Raids.W8_GreerCM, 1, 50);
 
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Decima", &aKP.Raids.W8_Decima, 1, 50);
+				ImGui::InputInt("迪西瑪(Decima)", &aKP.Raids.W8_Decima, 1, 50);
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Decima CM", &aKP.Raids.W8_DecimaCM, 1, 50);
+				ImGui::InputInt("迪西瑪 挑戰模式(Decima CM)", &aKP.Raids.W8_DecimaCM, 1, 50);
 
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Ura", &aKP.Raids.W8_Ura, 1, 50);
+				ImGui::InputInt("厄拉(Ura)", &aKP.Raids.W8_Ura, 1, 50);
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Ura CM", &aKP.Raids.W8_UraCM, 1, 50);
+				ImGui::InputInt("厄拉 挑戰模式(Ura CM)", &aKP.Raids.W8_UraCM, 1, 50);
 
-				ImGui::Checkbox("The Eternal", &aKP.Raids.W8_TheEternal);
-				ImGui::Checkbox("Breaker of Titans", &aKP.Raids.W8_BreakerOfTitans);
-				ImGui::Checkbox("Raid Expert", &aKP.Raids.W8_RaidExpert);
-				ImGui::Checkbox("Godsbane", &aKP.Raids.W8_Godsbane);
-				ImGui::Checkbox("Legendary Conqueror of Ura", &aKP.Raids.W8_LegendaryConquerorOfUra);
+				ImGui::Checkbox("巴里爾山末日(The Eternal)", &aKP.Raids.W8_TheEternal);
+				ImGui::Checkbox("泰坦粉碎者(Breaker of Titans)", &aKP.Raids.W8_BreakerOfTitans);
+				ImGui::Checkbox("巴里爾山大型地下城專家(Raid Expert)", &aKP.Raids.W8_RaidExpert);
+				ImGui::Checkbox("神明之災(Godsbane)", &aKP.Raids.W8_Godsbane);
+				ImGui::Checkbox("傳奇厄拉征服者(Legendary Conqueror of Ura)", &aKP.Raids.W8_LegendaryConquerorOfUra);
 
 				ImGui::TreePop();
 			}
@@ -202,49 +202,49 @@ void KPRequirementEditor(KPMEInfo_t& aKP)
 			ImGui::TreePop();
 		}
 
-		if (ImGui::TreeNode("Encounters"))
+		if (ImGui::TreeNode("進攻任務(SM)"))
 		{
-			if (ImGui::TreeNode("Icebrood Saga"))
+			if (ImGui::TreeNode("冰巢傳說(Icebrood Saga)"))
 			{
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Boneskinner Ritual Vials", &aKP.Strikes.IBS_BoneskinnerVial, 1, 50);
+				ImGui::InputInt("骸骨剝皮怪儀式瓶(Boneskinner Ritual Vials)", &aKP.Strikes.IBS_BoneskinnerVial, 1, 50);
 
 				ImGui::TreePop();
 			}
 
-			if (ImGui::TreeNode("End of Dragons"))
+			if (ImGui::TreeNode("巨龍絕境(End of Dragons)"))
 			{
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Aetherblade Hideout", &aKP.Strikes.EOD_AH, 1, 50);
+				ImGui::InputInt("以太之刃藏身處(Aetherblade Hideout)", &aKP.Strikes.EOD_AH, 1, 50);
 
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Aetherblade Hideout (CM)", &aKP.Strikes.EOD_AHCM, 1, 50);
+				ImGui::InputInt("以太之刃藏身處 挑戰模式(Aetherblade Hideout CM)", &aKP.Strikes.EOD_AHCM, 1, 50);
 
-				ImGui::Checkbox("Peerless Geometer", &aKP.Strikes.EOD_PeerlessGeometer);
-
-				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Kaineng Overlook", &aKP.Strikes.EOD_KO, 1, 50);
+				ImGui::Checkbox("傑出幾何學家(Peerless Geometer)", &aKP.Strikes.EOD_PeerlessGeometer);
 
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Kaineng Overlook (CM)", &aKP.Strikes.EOD_KOCM, 1, 50);
-
-				ImGui::Checkbox("The Great Equalizer", &aKP.Strikes.EOD_TheGreatEqualizer);
+				ImGui::InputInt("凱寧瞭望台(Kaineng Overlook)", &aKP.Strikes.EOD_KO, 1, 50);
 
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Ankka", &aKP.Strikes.EOD_Ankka, 1, 50);
+				ImGui::InputInt("凱寧瞭望台 挑戰模式(Kaineng Overlook CM)", &aKP.Strikes.EOD_KOCM, 1, 50);
+
+				ImGui::Checkbox("偉大平衡者(The Great Equalizer)", &aKP.Strikes.EOD_TheGreatEqualizer);
 
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Ankka (CM)", &aKP.Strikes.EOD_AnkkaCM, 1, 50);
-
-				ImGui::Checkbox("Gazed into the Void", &aKP.Strikes.EOD_GazedIntoTheVoid);
+				ImGui::InputInt("安卡(Ankka)", &aKP.Strikes.EOD_Ankka, 1, 50);
 
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Harvest Temple", &aKP.Strikes.EOD_HT, 1, 50);
+				ImGui::InputInt("安卡 挑戰模式(Ankka CM)", &aKP.Strikes.EOD_AnkkaCM, 1, 50);
+
+				ImGui::Checkbox("凝視虛空(Gazed into the Void)", &aKP.Strikes.EOD_GazedIntoTheVoid);
 
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Harvest Temple (CM)", &aKP.Strikes.EOD_HTCM, 1, 50);
+				ImGui::InputInt("豐收神殿(Harvest Temple)", &aKP.Strikes.EOD_HT, 1, 50);
 
-				ImGui::Checkbox("The Voidwalker", &aKP.Strikes.EOD_TheVoidwalker);
+				ImGui::SetNextItemWidth(sz * 10);
+				ImGui::InputInt("豐收神殿 挑戰模式(Harvest Temple CM)", &aKP.Strikes.EOD_HTCM, 1, 50);
+
+				ImGui::Checkbox("虛空行者(The Voidwalker)", &aKP.Strikes.EOD_TheVoidwalker);
 
 				ImGui::TreePop();
 			}
@@ -252,47 +252,47 @@ void KPRequirementEditor(KPMEInfo_t& aKP)
 			if (ImGui::TreeNode("LWS1 - Scarlet's War"))
 			{
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Old Lion's Court", &aKP.Strikes.EOD_OLC, 1, 50);
+				ImGui::InputInt("舊雄獅廣場(Old Lion's Court)", &aKP.Strikes.EOD_OLC, 1, 50);
 
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Old Lion's Court (CM)", &aKP.Strikes.EOD_OLCCM, 1, 50);
+				ImGui::InputInt("舊雄獅廣場 挑戰模式(Old Lion's Court CM)", &aKP.Strikes.EOD_OLCCM, 1, 50);
 
-				ImGui::Checkbox("Defender of Lion's Court", &aKP.Strikes.EOD_DefenderOfLionsCourt);
+				ImGui::Checkbox("雄獅廣場守衛者(Defender of Lion's Court)", &aKP.Strikes.EOD_DefenderOfLionsCourt);
 
 				ImGui::TreePop();
 			}
 
-			if (ImGui::TreeNode("Secrets of the Obscure"))
+			if (ImGui::TreeNode("天界之謎(Secrets of the Obscure)"))
 			{
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Cosmic Observatory", &aKP.Strikes.EOD_Dagda, 1, 50);
+				ImGui::InputInt("宇宙觀測台(Cosmic Observatory)", &aKP.Strikes.EOD_Dagda, 1, 50);
 
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Cosmic Observatory (CM)", &aKP.Strikes.EOD_DagdaCM, 1, 50);
+				ImGui::InputInt("宇宙觀測台 挑戰模式(Cosmic Observatory CM)", &aKP.Strikes.EOD_DagdaCM, 1, 50);
 
-				ImGui::Checkbox("Mind Flayer", &aKP.Strikes.EOD_MindFlayer);
-
-				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Temple of Febe", &aKP.Strikes.EOD_Cerus, 1, 50);
+				ImGui::Checkbox("奪心魔(Mind Flayer)", &aKP.Strikes.EOD_MindFlayer);
 
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Temple of Febe (CM)", &aKP.Strikes.EOD_CerusCM, 1, 50);
+				ImGui::InputInt("菲勃神殿(Temple of Febe)", &aKP.Strikes.EOD_Cerus, 1, 50);
 
-				ImGui::Checkbox("Embodiment of Sin", &aKP.Strikes.EOD_EmbodimentOfSin);
-				ImGui::Checkbox("Legendary Conqueror of Cerus", &aKP.Strikes.EOD_LegendaryConquerorOfCerus);
+				ImGui::SetNextItemWidth(sz * 10);
+				ImGui::InputInt("菲勃神殿 挑戰模式(Temple of Febe CM)", &aKP.Strikes.EOD_CerusCM, 1, 50);
+
+				ImGui::Checkbox("罪惡化身(Embodiment of Sin)", &aKP.Strikes.EOD_EmbodimentOfSin);
+				ImGui::Checkbox("傳奇賽魯斯征服者(Legendary Conqueror of Cerus)", &aKP.Strikes.EOD_LegendaryConquerorOfCerus);
 
 				ImGui::TreePop();
 			}
 			
-			if (ImGui::TreeNode("Visions of Eternity"))
+			if (ImGui::TreeNode("永恆願景(Visions of Eternity)"))
 			{
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Kela", &aKP.Strikes.VOE_Kela, 1, 50);
+				ImGui::InputInt("齊拉(Kela)", &aKP.Strikes.VOE_Kela, 1, 50);
 
 				ImGui::SetNextItemWidth(sz * 10);
-				ImGui::InputInt("Kela (CM)", &aKP.Strikes.VOE_KelaCM, 1, 50);
+				ImGui::InputInt("齊拉 挑戰模式(Kela CM)", &aKP.Strikes.VOE_KelaCM, 1, 50);
 
-				ImGui::Checkbox("Crustacean Corraller", &aKP.Strikes.VOE_CrustaceanCorraler);
+				ImGui::Checkbox("甲殼生物飼養者(Crustacean Corraller)", &aKP.Strikes.VOE_CrustaceanCorraler);
 
 				ImGui::TreePop();
 			}
@@ -300,22 +300,22 @@ void KPRequirementEditor(KPMEInfo_t& aKP)
 			ImGui::TreePop();
 		}
 
-		if (ImGui::TreeNode("Fractals"))
+		if (ImGui::TreeNode("迷霧碎層(FotM)"))
 		{
 			ImGui::SetNextItemWidth(sz * 10);
-			ImGui::InputInt("Unstable Fractal Essence", &aKP.Fractals.UFE, 1, 50);
+			ImGui::InputInt("不穩定碎層精華(Unstable Fractal Essence)", &aKP.Fractals.UFE, 1, 50);
 
-			ImGui::Checkbox("The Unclean - Nightmare Fractal", &aKP.Fractals.TheUnclean);
-			ImGui::Checkbox("Leaves No Hero Behind - Shattered Observatory", &aKP.Fractals.LNHB);
-			ImGui::Checkbox("Defier of Doubt - Sunqua Peak", &aKP.Fractals.DoD);
-			ImGui::Checkbox("Dances with Demons - Sunqua Peak", &aKP.Fractals.DwD);
-			ImGui::Checkbox("Nightmare Aspect - Silent Surf", &aKP.Fractals.NightmareAspect);
-			ImGui::Checkbox("Kryptis Exorcist - Lonely Tower", &aKP.Fractals.KryptisExorcist);
+			ImGui::Checkbox("不淨者(The Unclean) - 噩夢(Nightmare)", &aKP.Fractals.TheUnclean);
+			ImGui::Checkbox("決不放棄(Leaves No Hero Behind) - 破碎觀測台(Shattered Observatory)", &aKP.Fractals.LNHB);
+			ImGui::Checkbox("對抗懷疑(Defier of Doubt) - 桑泉峰(Sunqua Peak)", &aKP.Fractals.DoD);
+			ImGui::Checkbox("與魔共舞(Dances with Demons) - 桑泉峰(Sunqua Peak)", &aKP.Fractals.DwD);
+			ImGui::Checkbox("噩夢分身(Nightmare Aspect) - 寂靜之浪(Silent Surf)", &aKP.Fractals.NightmareAspect);
+			ImGui::Checkbox("氪族驅魔師(Kryptis Exorcist) - 孤高尖塔(Lonely Tower)", &aKP.Fractals.KryptisExorcist);
 
-			ImGui::Checkbox("Fractal Savant", &aKP.Fractals.FractalSavant);
-			ImGui::Checkbox("Fractal Prodigy", &aKP.Fractals.FractalProdigy);
-			ImGui::Checkbox("Fractal Champion", &aKP.Fractals.FractalChampion);
-			ImGui::Checkbox("Fractal God", &aKP.Fractals.FractalGod);
+			ImGui::Checkbox("碎層學士(Fractal Savant)", &aKP.Fractals.FractalSavant);
+			ImGui::Checkbox("碎層天才(Fractal Prodigy)", &aKP.Fractals.FractalProdigy);
+			ImGui::Checkbox("碎層冠軍(Fractal Champion)", &aKP.Fractals.FractalChampion);
+			ImGui::Checkbox("碎層神明(Fractal God)", &aKP.Fractals.FractalGod);
 
 			ImGui::TreePop();
 		}
@@ -340,7 +340,7 @@ void CSquadMgr::Render()
 	static ImU32 errCol = IM_COL32(172, 89, 89, 255);
 
 	ImGui::SetNextWindowSizeConstraints(ImVec2(-1, 100), ImVec2(-1, ImGui::GetIO().DisplaySize.y / 2));
-	if (ImGui::Begin("Squad Manager", &this->Visible, s_WndFlags))
+	if (ImGui::Begin("團隊管理器", &this->Visible, s_WndFlags))
 	{
 		const std::lock_guard<std::mutex> lock(this->Mutex);
 
@@ -354,13 +354,13 @@ void CSquadMgr::Render()
 
 		if (this->Players.size() == 0)
 		{
-			ImGui::Text("Not in a squad or party.");
+			ImGui::Text("不在小隊或團隊中。");
 		}
 		else
 		{
 			if (!(hasRTAPI || hasUE))
 			{
-				ImGui::TextColored(ImColor(warnCol), "RealTime API not installed.");
+				ImGui::TextColored(ImColor(warnCol), "未安裝 RealTime API。");
 			}
 
 			KPRequirementEditor(this->KPRequirement);
@@ -369,14 +369,14 @@ void CSquadMgr::Render()
 				if (ImGui::IsItemHovered())
 				{
 					ImGui::BeginTooltip();
-					ImGui::Text("Requirements:");
+					ImGui::Text("要求:");
 					ImGui::Text(CheckRequirements(KPMEInfo_t{}, this->KPRequirement, true).c_str());
 					ImGui::EndTooltip();
 				}
 
 				ImGui::SameLine();
 				ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, ImVec2(0, 0));
-				if (RenderIconButton(sz, &G::Textures[ETextures::BtnClose], "ICON_CLOSE", "Clear KP Requirements", IDB_CLOSE))
+				if (RenderIconButton(sz, &G::Textures[ETextures::BtnClose], "ICON_CLOSE", "清除 KP 要求", IDB_CLOSE))
 				{
 					this->KPRequirement = {};
 				}
@@ -430,15 +430,15 @@ void CSquadMgr::Render()
 				{
 					ImGui::TableHeadersRow();
 					ImGui::TableSetColumnIndex(0);
-					ImGui::Text("Account");
+					ImGui::Text("帳號");
 
 					ImGui::TableSetColumnIndex(1);
-					ImGui::Text("Character");
+					ImGui::Text("角色");
 
 					if (!(hasRTAPI || hasUE))
 					{
 						ImGui::TableSetColumnIndex(subIdx);
-						ImGui::Text("Subgroup");
+						ImGui::Text("小隊");
 					}
 
 					if (hasKPReq)
@@ -448,16 +448,16 @@ void CSquadMgr::Render()
 					}
 
 					ImGui::TableSetColumnIndex(dmgIdx);
-					ImGui::Text("Damage");
+					ImGui::Text("傷害");
 
 					ImGui::TableSetColumnIndex(alacIdx);
-					RenderIcon(sz, &G::Textures[ETextures::BoonAlacrity], "TEX_BOON_ALACRITY", "Alacrity", IDB_ALACRITY);
+					RenderIcon(sz, &G::Textures[ETextures::BoonAlacrity], "TEX_BOON_ALACRITY", "敏捷(Alacrity)", IDB_ALACRITY);
 
 					ImGui::TableSetColumnIndex(quicIdx);
-					RenderIcon(sz, &G::Textures[ETextures::BoonQuickness], "TEX_BOON_QUICKNESS", "Quickness", IDB_QUICKNESS);
+					RenderIcon(sz, &G::Textures[ETextures::BoonQuickness], "TEX_BOON_QUICKNESS", "急速(Quickness)", IDB_QUICKNESS);
 
 					ImGui::TableSetColumnIndex(noteIdx);
-					ImGui::Text("Notes");
+					ImGui::Text("備註");
 
 					if (s_AnyUntracked)
 					{
@@ -480,7 +480,7 @@ void CSquadMgr::Render()
 						if (ImGui::IsItemHovered())
 						{
 							ImGui::BeginTooltip();
-							ImGui::Text("Remove all untracked players.");
+							ImGui::Text("移除所有未追蹤的玩家。");
 							ImGui::EndTooltip();
 						};
 					}
@@ -512,12 +512,12 @@ void CSquadMgr::Render()
 						ImGui::TableNextColumn();
 						if (player.Member.IsCommander)
 						{
-							RenderIcon(sz, &G::Textures[ETextures::TagCommander], "TEX_TAG_COMMANDER", "Commander", IDB_TAG_COMMANDER);
+							RenderIcon(sz, &G::Textures[ETextures::TagCommander], "TEX_TAG_COMMANDER", "指揮官", IDB_TAG_COMMANDER);
 							ImGui::SameLine();
 						}
 						else if (player.Member.IsLieutenant)
 						{
-							RenderIcon(sz, &G::Textures[ETextures::TagLieutenant], "TEX_TAG_LIEUTENANT", "Lieutenant", IDB_TAG_LIEUTENANT);
+							RenderIcon(sz, &G::Textures[ETextures::TagLieutenant], "TEX_TAG_LIEUTENANT", "副官", IDB_TAG_LIEUTENANT);
 							ImGui::SameLine();
 						}
 						if (player.KPMEInfo == nullptr || player.KPMEInfo->ProofURL.empty())
@@ -566,7 +566,7 @@ void CSquadMgr::Render()
 									if (ImGui::IsItemHovered())
 									{
 										ImGui::BeginTooltip();
-										ImGui::Text("This player does not have a killproof.me account or does not share it.");
+										ImGui::Text("此玩家沒有 killproof.me 帳號，或是未公開其帳號。");
 										ImGui::EndTooltip();
 									}
 								}
@@ -587,7 +587,7 @@ void CSquadMgr::Render()
 							}
 							else
 							{
-								ImGui::Text("NO DATA");
+								ImGui::Text("沒有資料");
 
 								/* Fetch the KP data. */
 								const std::lock_guard<std::mutex> kplock(this->KPMutex);
@@ -602,31 +602,31 @@ void CSquadMgr::Render()
 						ImGui::TableNextColumn();
 						std::string dmgTypePreview =
 							player.UtilityInfo.DamageType == EDamageType::None
-								? "None"
+								? "無"
 								: player.UtilityInfo.DamageType == EDamageType::Power
-									? "PWR"
+									? "直傷"
 									: player.UtilityInfo.DamageType == EDamageType::Condition
-										? "CND"
-										: "HEAL";
+										? "症狀"
+										: "治療";
 						ImGui::SetNextItemWidth(sz * 5);
 						if (ImGui::BeginCombo(("##DamageType_" + std::string(player.Member.AccountName)).c_str(), dmgTypePreview.c_str()))
 						{
-							if (ImGui::Selectable("None", player.UtilityInfo.DamageType == EDamageType::None))
+							if (ImGui::Selectable("無", player.UtilityInfo.DamageType == EDamageType::None))
 							{
 								player.UtilityInfo.DamageType = EDamageType::None;
 							}
 
-							if (ImGui::Selectable("PWR", player.UtilityInfo.DamageType == EDamageType::Power))
+							if (ImGui::Selectable("直傷", player.UtilityInfo.DamageType == EDamageType::Power))
 							{
 								player.UtilityInfo.DamageType = EDamageType::Power;
 							}
 
-							if (ImGui::Selectable("CND", player.UtilityInfo.DamageType == EDamageType::Condition))
+							if (ImGui::Selectable("症狀", player.UtilityInfo.DamageType == EDamageType::Condition))
 							{
 								player.UtilityInfo.DamageType = EDamageType::Condition;
 							}
 
-							if (ImGui::Selectable("HEAL", player.UtilityInfo.DamageType == EDamageType::Heal))
+							if (ImGui::Selectable("治療", player.UtilityInfo.DamageType == EDamageType::Heal))
 							{
 								player.UtilityInfo.DamageType = EDamageType::Heal;
 							}
@@ -706,23 +706,23 @@ void CSquadMgr::Render()
 					{
 						if (G::RTAPI->GroupType == RTAPI::EGroupType::Party)
 						{
-							ImGui::Text("Party");
+							ImGui::Text("隊伍");
 						}
 						else
 						{
-							ImGui::Text("Pending");
+							ImGui::Text("等候中");
 						}
 					}
 					else
 					{
-						ImGui::Text("Subgroup %d", sub);
+						ImGui::Text("小隊 %d", sub);
 					}
 					ImGui::TableSetColumnIndex(dmgIdx);
 					ImGui::Text(
 						"%s%s%s",
-						dmgType_pwr ? String::Format("PWR: %d\n", dmgType_pwr).c_str() : "",
-						dmgType_cnd ? String::Format("CND: %d\n", dmgType_cnd).c_str() : "",
-						dmgType_heal ? String::Format("HEAL: %d", dmgType_heal).c_str() : ""
+						dmgType_pwr ? String::Format("直傷: %d\n", dmgType_pwr).c_str() : "",
+						dmgType_cnd ? String::Format("症狀: %d\n", dmgType_cnd).c_str() : "",
+						dmgType_heal ? String::Format("治療: %d", dmgType_heal).c_str() : ""
 					);
 
 					ImU32 textCol = ImU32(ImColor(ImGui::GetStyle().Colors[ImGuiCol_Text]));
@@ -732,7 +732,7 @@ void CSquadMgr::Render()
 
 					if (fullCoverage) { ImGui::PopStyleColor(); } // reset green text
 
-					if (playerCount > 5) { ImGui::TableSetColumnIndex(noteIdx); ImGui::TextColored(ImColor(warnCol), "Warning: More than 5 players!"); }
+					if (playerCount > 5) { ImGui::TableSetColumnIndex(noteIdx); ImGui::TextColored(ImColor(warnCol), "警告: 超過 5 名玩家!"); }
 				}
 
 				s_AnyUntracked = anyUntracked;
